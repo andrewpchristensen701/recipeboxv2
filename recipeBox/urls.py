@@ -19,7 +19,9 @@ from recipeBox import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.recipes),
+    path('', views.recipes, name="homepage"),
     path('author/<str:author_name>', views.author),
-    path('recipe/<int:recipe_id>', views.recipe)
+    path('recipe/<int:recipe_id>', views.recipe),
+    path('newAuthor', views.new_author, name="create author"),
+    path('newRecipe', views.new_recipe, name="create recipe")
 ]
