@@ -7,6 +7,9 @@
     <title>{{recipe.title}}</title>
 </head>
 <body>
+    <a href="{{ sign_in_button_link }}">
+        <button> {{sign_in_button_label}}</button>
+    </a>
     <h1>All Recipes</h1>
     <br/>
     <ul>
@@ -14,10 +17,10 @@
         <li><a href='recipe/{{ recipe.id }}'>{{ recipe.title }}</a></li>
     {% endfor %}
     </ul>
-    <a href="/newRecipe">
+    <a href="/newRecipe/">
     <button>Create Recipe</button>
     </a>
-    <a href="/newAuthor">
+    <a href="/newAuthor/">
     <button>Create Author</button>
     </a>
 </body>
