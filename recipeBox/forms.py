@@ -17,3 +17,9 @@ class CreateRecipeForm(forms.Form):
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=50)
     password = forms.CharField(widget=forms.PasswordInput())
+
+
+class CreatUserForm(forms.Form):
+    name = forms.CharField(max_length=90)
+    username = forms.CharField(max_length=50)
+    password = forms.CharField(widget=forms.PasswordInput())
