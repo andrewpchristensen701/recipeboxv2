@@ -22,6 +22,7 @@ urlpatterns = [
     path('', views.recipes, name="homepage"),
     path('author/<str:author_name>', views.author),
     path('recipe/<int:recipe_id>', views.recipe),
-    path('newAuthor', views.new_author, name="create author"),
-    path('newRecipe', views.new_recipe, name="create recipe")
+    path('newAuthor/', views.new_author, name="create author"),
+    path('newRecipe/', views.new_recipe, name="create recipe"),
+    path('login/', views.login_view, name="login"),
 ]
