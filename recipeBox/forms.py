@@ -23,3 +23,12 @@ class CreatUserForm(forms.Form):
     name = forms.CharField(max_length=90)
     username = forms.CharField(max_length=50)
     password = forms.CharField(widget=forms.PasswordInput())
+
+
+class EditRecipeForm(forms.Form):
+    title = forms.CharField(max_length=20)
+    author = forms.ModelChoiceField(queryset=Author.objects.all())
+    time_required = forms.CharField(max_length=90)
+    description = forms.CharField(widget=forms.Textarea)
+    instructions = forms.CharField(widget=forms.Textarea)
+
